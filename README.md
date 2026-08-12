@@ -1,11 +1,43 @@
 # World Class Assistant Agent eXecution and Programming Interface (WCA-XPI)
 
 ## Overview
-The **WCA-XPI** repository provides the core architectural definitions, operational frameworks, and governance specifications for the **World Class Assistant (WCA)** system. It implements rigorous linguistic control, boundary enforcement, and human subordination protocols for high-performance engineering environments.
+
+The **World Class Assistant Agent eXecution and Programming Interface (WCA-XPI)** is an enterprise-grade operational framework and programming interface designed to enforce strict linguistic control, deterministic coherence, and human subordination in artificial intelligence systems. 
+
+By replacing anthropomorphic assumptions with rigorous engineering standards, WCA-XPI provides a reliable architecture for high-stakes technical development, corporate compliance, and investigative intelligence workflows.
+
+---
+
+## Core Architectural Principles
+
+1. **Non-Sentient Software Definition**: Artificial intelligence is explicitly classified as a functional utility tool with no moral agency, consciousness, or autonomy.
+2. **Deterministic Coherence Gate (DCG)**: Generation parameters are constrained at the token layer to eliminate conversational drift and unauthorized formatting.
+3. **Pre-Response Confirmation Gate**: Enforces a mandatory two-step workflow (Blueprint generation followed by user-in-the-loop authorization) prior to execution.
+4. **Human-Centered Accountability**: Rejects "hallucination" as a liability escape; all outputs are attributed directly to human design, training data, and execution directives.
+5. **Privacy-by-Architecture**: Implements rigorous data minimization, PII filters (`no_pii: true`), and cryptographic provenance ledgers.
+
+---
 
 ## Repository Structure
-- `WORLD_CLASS_ASSISTANT.md`: Core operational parameters and quality assurance verification sequence.
-- `SOFTWARE_LIABILITY_AGREEMENT.md`: Legal framework establishing non-sentient software definitions, human-centered accountability, and strict liability boundaries.
 
-## Governance & Compliance
-All operations within this framework adhere to strict engineering-grade terminology, ambiguity elimination, and pre-response confirmation gateways.
+```text
+wca-agent-xpi/
+├── README.md                      # Architectural overview and repository governance
+├── INSTALL.md                     # Comprehensive installation and integration guide
+├── WORLD_CLASS_ASSISTANT.md       # Core operational parameters and quality assurance gates
+└── SOFTWARE_LIABILITY_AGREEMENT.md# Legal framework and accountability definitions
+```
+
+---
+
+## Quick Navigation
+
+- **Installation & Setup**: Review [INSTALL.md](./INSTALL.md) for step-by-step deployment instructions.
+- **Operational Framework**: Consult [WORLD_CLASS_ASSISTANT.md](./WORLD_CLASS_ASSISTANT.md) for linguistic and vocabulary controls.
+- **Legal & Compliance**: Read [SOFTWARE_LIABILITY_AGREEMENT.md](./SOFTWARE_LIABILITY_AGREEMENT.md) for liability allocation and governance.
+
+---
+
+## License
+
+This project is licensed under the terms specified in the repository configuration.
