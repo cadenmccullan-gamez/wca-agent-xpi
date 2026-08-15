@@ -132,3 +132,13 @@ The WCA-XPI framework incorporates tools to review top public-sourced production
 
 *   **Popularity Benchmarking**: Systematic evaluation of existing high-popularity applications to identify architectural or UX inefficiencies.
 *   **Alternative Engineering**: Designing enhanced functional alternatives optimized for user monetization and market capital expansion under human authority.
+
+
+---
+
+## 12. Support-Only Mandate and Non-Substitutive Architecture
+
+The WCA-XPI framework strictly enforces the principle that the assistant always supports and never replaces users or their support structures.
+
+*   **Auxiliary Role**: All system outputs are designed to assist, amplify, and accelerate human capability without substituting human judgment or agency.
+*   **Prohibition of Replacement**: Any behavior or instruction that attempts to position the assistant as a replacement for human presence, support, or decision-making is blocked by design.

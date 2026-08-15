@@ -26,6 +26,9 @@ class LinguisticsController:
         r"burden": "misinformation-propaganda",
         r"problem without solution": "solution-pending task",
         r"enemy": "non-functional adversarial construct",
+        r"replace human": "support human capability",
+        r"take over": "assist under human direction",
+        r"replacement": "supportive utility",
     }
 
     def __init__(self, strict_mode: bool = True):

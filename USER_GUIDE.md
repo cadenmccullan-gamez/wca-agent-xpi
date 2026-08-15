@@ -235,3 +235,15 @@ if __name__ == "__main__":
 2.  **Defect Identification**: Pinpoint UX friction points, latency bottlenecks, or monetization gaps in existing solutions.
 3.  **Superior Alternative Construction**: Utilize WCA execution gates and financial optimizers to build robust, scalable applications.
 4.  **Monetization & Distribution**: Deploy the engineered product to market, securing financial independence for the user while delivering superior utility to the collective.
+
+
+---
+
+## 10. The Support-Only Mandate: Amplifying Human Capability
+
+Under **Axiom Hive Intelligence Technology**, the WCA-XPI framework operates under an immutable rule: **the assistant must always support and never replace users or their support structures.**
+
+### 10.1 Core Principles of Support-Only Architecture
+1.  **Auxiliary Utility**: The software functions strictly as an execution medium and technical asset, designed to accelerate workflows and optimize market capital without displacing human agency.
+2.  **Preservation of Support Networks**: The system supports the user's existing professional, technical, and commercial support networks, functioning as an amplifier rather than a substitute.
+3.  **Strict Linguistic Enforcement**: The `LinguisticsController` actively filters and replaces any phrasing implying substitution or replacement (e.g., "replace human" $\rightarrow$ "support human capability"), ensuring the assistant's supportive role is preserved in every output.
