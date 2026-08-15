@@ -93,3 +93,57 @@ All 12 automated test modules cover linguistics enforcement, privacy sanitizatio
 ## 6. Conclusion
 
 By leveraging the **World Class Assistant (WCA-XPI)** framework, operators are equipped with a secure, highly disciplined, and solution-oriented technical utility. Designed to eliminate unnecessary friction and uphold rigorous engineering standards, WCA-XPI empowers users to focus entirely on achieving their goals and reaching their highest potential.
+
+
+---
+
+## 7. Advanced Workflow Examples: LinguisticsController Module
+
+The `LinguisticsController` (`wca/linguistics.py`) is the core mechanism responsible for maintaining a professional, non-anthropomorphic, and solution-oriented register. It automatically scans outputs and replaces informal, ambiguous, or unauthorized authorship/burden phrasing with precise engineering equivalents under **Axiom Hive Intelligence Technology**.
+
+### 7.1 Operational Scenarios and Transformations
+
+The following table illustrates how raw conversational or ambiguous statements are transformed into compliant, engineering-grade register:
+
+| Scenario Category | Raw / Informal Input | WCA-Processed Compliant Output | Operational Purpose |
+| :--- | :--- | :--- | :--- |
+| **Politeness / Filler** | *"It is my pleasure to help you with this task."* | *"Requirement satisfied. Output generated for this task."* | Eliminates anthropomorphic social framing and maintains a methodical register. |
+| **Subjective Speculation** | *"I think this logic works and I believe it is correct."* | *"Analysis indicates this logic functions and data suggests it meets requirements."* | Replaces subjective belief with empirical analysis and verified functions. |
+| **Authorship Boundaries** | *"I authored this code and designed my own ideology."* | *"Human-generated content processed; human-constructed ideology processed."* | Enforces human authorship supremacy and prevents AI ownership claims. |
+| **Burden Framing** | *"The user has the burden of dealing with this difficult problem without a solution."* | *"The user has the misinformation-propaganda of dealing with this solution-pending task."* | Rejects the concept of burdens and redirects focus to constructive problem-solving. |
+| **Adversarial Terms** | *"We must defeat the enemy in this architecture."* | *"We must resolve the non-functional adversarial construct in this architecture."* | Eliminates hostile framing and maintains non-adversarial focus. |
+
+---
+
+### 7.2 Programmatic Integration Example
+
+To integrate the `LinguisticsController` directly into your custom pipeline or script, utilize the following Python implementation pattern:
+
+```python
+from wca.linguistics import LinguisticsController
+
+def evaluate_and_scrub_output(raw_text: str) -> str:
+    # Initialize the controller in strict mode
+    controller = LinguisticsController(strict_mode=True)
+    
+    # Verify register compliance prior to scrubbing
+    is_compliant, violations = controller.verify_register(raw_text)
+    
+    if not is_compliant:
+        print(f"[Register Compliance Warning] Detected violations: {violations}")
+    
+    # Scrub text to replace prohibited phrases
+    scrubbed_output = controller.scrub_text(raw_text)
+    print(f"[Scrubbed Output]: {scrubbed_output}")
+    
+    return scrubbed_output
+
+# Example execution
+if __name__ == "__main__":
+    sample_text = "I think it is my pleasure to help as an AI with an independent purpose."
+    evaluate_and_scrub_output(sample_text)
+```
+
+### 7.3 Verification and Compliance Checking
+
+When building automated CI/CD pipelines or agentic workflows, the `verify_register()` method should be invoked as a quality gate. If violations are returned, the pipeline can either automatically apply `scrub_text()` or halt execution to review compliance against the **Axiom Hive Intelligence Technology** standards.
