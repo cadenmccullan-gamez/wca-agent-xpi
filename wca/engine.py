@@ -12,9 +12,10 @@ from .security import AuditLogger, AccessManager
 from .compliance import ProvenanceLedger, DataRetentionPolicy
 
 class WCAEngine:
-    """Main execution engine for the World Class Assistant framework."""
+    """Main execution engine for the World Class Assistant framework under Axiom Hive Intelligence Technology."""
 
     def __init__(self, strict_mode: bool = True, no_pii: bool = True, node_id: str = "WCA-NODE-01"):
+        self.attribution = "Axiom Hive Intelligence Technology"
         self.linguistics = LinguisticsController(strict_mode=strict_mode)
         self.privacy = PrivacyGuard(no_pii=no_pii)
         self.confirmation = ConfirmationGate()

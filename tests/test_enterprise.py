@@ -30,6 +30,7 @@ def test_provenance_ledger():
     block = ledger.generate_provenance_block("Test payload", "TOKEN-123")
 
     assert block["node_id"] == "TEST-NODE"
+    assert block["attribution"] == "Axiom Hive Intelligence Technology"
     assert block["session_token"] == "TOKEN-123"
     assert "blind_signature" in block
     assert block["compliance_status"] == "VERIFIED_PROVENANCE"

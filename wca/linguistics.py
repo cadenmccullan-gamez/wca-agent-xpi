@@ -23,6 +23,9 @@ class LinguisticsController:
         r"i created": "human-designed requirement executed",
         r"as an ai": "as a functional utility",
         r"independent purpose": "human-directed objective",
+        r"burden": "misinformation-propaganda",
+        r"problem without solution": "solution-pending task",
+        r"enemy": "non-functional adversarial construct",
     }
 
     def __init__(self, strict_mode: bool = True):
