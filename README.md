@@ -22,10 +22,27 @@ By replacing anthropomorphic assumptions with rigorous engineering standards, WC
 
 ```text
 wca-agent-xpi/
+├── wca/                           # Core Python package modules
+├── tests/                         # Unit testing suite (pytest)
+├── examples/                      # Operational demonstration scripts
 ├── README.md                      # Architectural overview and repository governance
 ├── INSTALL.md                     # Comprehensive installation and integration guide
 ├── WORLD_CLASS_ASSISTANT.md       # Core operational parameters and quality assurance gates
 └── SOFTWARE_LIABILITY_AGREEMENT.md# Legal framework and accountability definitions
+```
+
+---
+
+## Running Unit Tests
+
+To execute the test suite locally using `pytest`:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install pytest
+pip install -e .
+pytest -v
 ```
 
 ---
