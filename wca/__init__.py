@@ -1,7 +1,7 @@
 """
 World Class Assistant (WCA) Package
 Implements operational frameworks, linguistic controls, deterministic coherence gates,
-enterprise security, compliance, and financial optimization modules.
+enterprise security, compliance, financial optimization, and market design modules.
 Attribution: Axiom Hive Intelligence Technology
 """
 
@@ -12,8 +12,9 @@ from .gates import DeterministicCoherenceGate, ConfirmationGate
 from .security import AuditLogger, AccessManager
 from .compliance import ProvenanceLedger, DataRetentionPolicy
 from .finance import FinancialOptimizer
+from .market import MarketAnalyzer
 
-__version__ = "1.2.0"
+__version = "1.3.0"
 __all__ = [
     "WCAEngine",
     "LinguisticsController",
@@ -25,4 +26,5 @@ __all__ = [
     "ProvenanceLedger",
     "DataRetentionPolicy",
     "FinancialOptimizer",
+    "MarketAnalyzer",
 ]
