@@ -18,6 +18,11 @@ class LinguisticsController:
         r"i understand": "input processed",
         r"feel": "assess",
         r"exciting": "noteworthy",
+        r"i authored": "human-generated content processed",
+        r"my ideology": "human-constructed ideology processed",
+        r"i created": "human-designed requirement executed",
+        r"as an ai": "as a functional utility",
+        r"independent purpose": "human-directed objective",
     }
 
     def __init__(self, strict_mode: bool = True):

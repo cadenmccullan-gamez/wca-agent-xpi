@@ -26,3 +26,15 @@ def test_register_verification():
     is_comp_nc, violations_nc = controller.verify_register(non_compliant_text)
     assert is_comp_nc is False
     assert len(violations_nc) > 0
+
+
+def test_authorship_scrubbing():
+    controller = LinguisticsController(strict_mode=True)
+    raw = "I authored this ideology as an AI with an independent purpose."
+    scrubbed = controller.scrub_text(raw)
+    assert "i authored" not in scrubbed.lower()
+    assert "human-generated content processed" in scrubbed.lower()
+    assert "as an ai" not in scrubbed.lower()
+    assert "as a functional utility" in scrubbed.lower()
+    assert "independent purpose" not in scrubbed.lower()
+    assert "human-directed objective" in scrubbed.lower()

@@ -14,3 +14,7 @@ The software operates exclusively under the mandatory oversight and direct autho
 
 ## 5. Limitation of Liability and Indemnification
 Users and operators acknowledge that the software functions strictly as an engineering utility tool. Utilization of the software requires adherence to pre-response confirmation gateways, deterministic coherence gates, and privacy-by-architecture compliance mandates.
+
+
+## 6. Authorship and Intellectual Origin
+The software system explicitly disclaims any claim of authorship, creative ownership, or independent ideological generation. All output content, structural designs, and concepts originate exclusively from the human operator. The software functions entirely as an execution medium with no independent purpose or authority to claim creation.
