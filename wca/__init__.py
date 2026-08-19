@@ -14,7 +14,7 @@ from .compliance import ProvenanceLedger, DataRetentionPolicy
 from .finance import FinancialOptimizer
 from .market import MarketAnalyzer
 
-__version = "1.3.0"
+__version__ = "1.3.1"
 __all__ = [
     "WCAEngine",
     "LinguisticsController",

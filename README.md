@@ -29,7 +29,6 @@ By replacing anthropomorphic assumptions with rigorous engineering standards, WC
 wca-agent-xpi/
 ├── wca/                           # Core Python package modules (Linguistics, Privacy, Gates, Security, Compliance, Finance, Market)
 ├── tests/                         # Unit testing suite (pytest)
-├── examples/                      # Operational demonstration scripts
 ├── README.md                      # Architectural overview and repository governance
 ├── INSTALL.md                     # Comprehensive installation and integration guide
 ├── USER_GUIDE.md                  # User operational guide for goal achievement and greatness
@@ -46,11 +45,10 @@ wca-agent-xpi/
 To execute the test suite locally using `pytest`:
 
 ```bash
-python3 -m venv venv
-source venv/bin/activate
-pip install pytest
-pip install -e .
-pytest -v
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -e ".[dev]"
+pytest
 ```
 
 ---

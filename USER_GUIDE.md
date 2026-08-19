@@ -41,20 +41,15 @@ git clone https://github.com/cadenmccullan-gamez/wca-agent-xpi.git
 cd wca-agent-xpi
 
 # Create and activate a virtual environment
-python3 -m venv venv
-source venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 
-# Install the package in editable mode with dependencies
-pip install pytest
-pip install -e .
+# Install the package with development dependencies
+pip install -e ".[dev]"
 ```
 
-### 3.2 Executing the Demonstration Pipeline
-To observe the WCA engine in action—including linguistic scrubbing, privacy protection, and pre-response confirmation gates—run the operational demo script:
-
-```bash
-python3 examples/demo.py
-```
+### 3.2 Integrating the Engine
+The package does not ship an operational demonstration, synthetic task, or default operator. The integrating application must register an authorized operator and supply a non-empty session identifier for each finalized output. Confirm role assignment, retention, logging, and deployment controls before processing operational information.
 
 ---
 
@@ -71,7 +66,7 @@ Enforces strict data minimization by automatically detecting and redacting PII (
 *   **Pre-Response Confirmation Gate**: Implements a mandatory two-step workflow (Blueprint generation followed by explicit operator approval) to guarantee complete human oversight before execution.
 
 ### 4.4 Security and Compliance (`wca.security` & `wca.compliance`)
-*   **Audit Logger**: Maintains a cryptographically chained, immutable audit trail of all operational events and access checks.
+*   **Audit Logger**: Maintains an in-process hash-chained audit trail with integrity verification and defensive export copies. Deployment-grade retention requires independently protected durable storage.
 *   **Access Manager (RBAC)**: Enforces role-based permissions (`viewer`, `analyst`, `administrator`) for privileged system functions.
 *   **Provenance Ledger**: Generates secure blind signatures and trusted timestamps attributed under **Axiom Hive Intelligence Technology** for complete traceability.
 
@@ -82,8 +77,8 @@ Enforces strict data minimization by automatically detecting and redacting PII (
 To ensure ongoing system integrity and verify operational compliance, run the test suite using `pytest`:
 
 ```bash
-source venv/bin/activate
-pytest -v
+source .venv/bin/activate
+pytest
 ```
 
 All 12 automated test modules cover linguistics enforcement, privacy sanitization, RBAC security, provenance generation, and execution gates.

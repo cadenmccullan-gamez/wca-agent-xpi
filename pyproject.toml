@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wca-agent-xpi"
+version = "1.3.1"
+description = "Axiom Hive Technology policy and privacy control library."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Alexis M. Adams" }]
+license = { text = "Proprietary" }
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[tool.setuptools]
+packages = ["wca"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

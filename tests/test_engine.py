@@ -1,19 +1,21 @@
-"""
-Unit tests for WCAEngine orchestration module.
+"""Tests for WCA engine orchestration.
+
+Authorship: Alexis M. Adams
 """
 
-import pytest
 from wca.engine import WCAEngine
 
-def test_engine_workflow():
-    engine = WCAEngine(strict_mode=True, no_pii=True)
 
-    input_text = "Hello test@example.com"
-    sanitized = engine.process_input(input_text, operator="system_analyst")
+def test_engine_workflow() -> None:
+    engine = WCAEngine(strict_mode=True, no_pii=True)
+    engine.register_operator("analyst", "analyst")
+
+    sanitized = engine.process_input("Hello contact@example.com", operator="analyst")
     assert "[REDACTED_EMAIL]" in sanitized
 
-    output_text = "I think my pleasure is complete."
-    final, compliant, provenance = engine.finalize_output(output_text)
+    final, compliant, provenance = engine.finalize_output(
+        "I think my pleasure is complete.", session_token="workflow-session"
+    )
     assert "analysis indicates" in final
     assert "requirement satisfied" in final
     assert compliant is True
