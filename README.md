@@ -1,69 +1,61 @@
-# World Class Assistant Agent eXecution and Programming Interface (WCA-XPI)
+# WCA-XPI
 
-[![WCA-XPI CI Pipeline](https://github.com/cadenmccullan-gamez/wca-agent-xpi/actions/workflows/ci.yml/badge.svg)](https://github.com/cadenmccullan-gamez/wca-agent-xpi/actions/workflows/ci.yml)
+**World Class Assistant Agent eXecution and Programming Interface**
 
-## Overview
+WCA-XPI is a Python reference library for bounded text processing, configured identifier-pattern redaction, process-local role checks, confirmation gates, in-memory audit records, and generated provenance records. It is designed for source review and application-layer integration experiments under human direction.
 
-The **World Class Assistant Agent eXecution and Programming Interface (WCA-XPI)** is an enterprise-grade operational framework and programming interface designed to enforce strict linguistic control, deterministic coherence, and human subordination in artificial intelligence systems under **Axiom Hive Intelligence Technology**. 
+> **Release status:** See [RELEASE_STATUS.md](RELEASE_STATUS.md). For exact supported behavior and limitations, see the [technical specification](TECHNICAL_SPECIFICATION.md).
 
-By replacing anthropomorphic assumptions with rigorous engineering standards, WCA-XPI provides a reliable architecture for high-stakes technical development, corporate compliance, and commercial app design engineering.
+## What Is Implemented
 
----
+| Component | Verified behavior |
+|---|---|
+| `WCAEngine` | Coordinates registered-operator checks, configured string redaction, language substitutions, output register checks, local audit events, and a provenance dictionary. |
+| `LinguisticsController` | Applies predefined case-insensitive phrase replacements and reports configured phrases that remain. |
+| `PrivacyGuard` | Detects and redacts configured email, U.S. SSN, and telephone patterns in strings and supported containers. |
+| `AccessManager` | Holds process-local assignments for `viewer`, `analyst`, and `administrator` roles and checks named permissions. |
+| `AuditLogger` | Maintains an in-memory SHA-256 hash-linked event sequence and checks its continuity. |
+| `ConfirmationGate` | Requires a generated blueprint and explicit Boolean approval before executing a caller-supplied function. |
+| `ProvenanceLedger` | Generates a local hash record from supplied text, session identifier, timestamp, node identifier, and attribution text. |
+| `FinancialOptimizer` and `MarketAnalyzer` | Return deterministic dictionaries from caller-supplied values; they do not retrieve or validate external financial or market data. |
 
-## Core Architectural Principles
-
-1. **Non-Sentient Software Definition**: Artificial intelligence is explicitly classified as a functional utility tool with no moral agency, consciousness, or autonomy.
-2. **Deterministic Coherence Gate (DCG)**: Generation parameters are constrained at the token layer to eliminate conversational drift and unauthorized formatting.
-3. **Pre-Response Confirmation Gate**: Enforces a mandatory two-step workflow (Blueprint generation followed by user-in-the-loop authorization) prior to execution.
-4. **Human-Centered Accountability**: Rejects "hallucination" as a liability escape; all outputs are attributed directly to human design, training data, and execution directives.
-5. **Privacy-by-Architecture**: Implements rigorous data minimization, PII filters (`no_pii: true`), and cryptographic provenance ledgers.
-6. **Positive Logic & Ethical Governance**: Mandates constructive, solution-oriented communication and prohibits adversarial framing or manufactured antagonism.
-7. **Solution-Oriented Mandate & Non-Collective Intelligence**: Rejects the imposition of "burdens," attributing all intelligence and provenance under Axiom Hive Intelligence Technology.
-8. **Market Capitalization & Commercial Design Engineering**: Mandates that all goals enhance market capital, optimize financial incentives, and empower users to engineer superior alternatives to public-sourced app designs.
-
----
-
-## Repository Structure
-
-```text
-wca-agent-xpi/
-├── wca/                           # Core Python package modules (Linguistics, Privacy, Gates, Security, Compliance, Finance, Market)
-├── tests/                         # Unit testing suite (pytest)
-├── README.md                      # Architectural overview and repository governance
-├── INSTALL.md                     # Comprehensive installation and integration guide
-├── USER_GUIDE.md                  # User operational guide for goal achievement and greatness
-├── MARKET_RESEARCH_REPORT.md      # Market research and commercial app design blueprints
-├── WORLD_CLASS_ASSISTANT.md       # Core operational parameters and quality assurance gates
-├── ETHICAL_GOVERNANCE.md          # Positive logic and non-adversarial communication protocols
-└── SOFTWARE_LIABILITY_AGREEMENT.md# Legal framework and accountability definitions
-```
-
----
-
-## Running Unit Tests
-
-To execute the test suite locally using `pytest`:
+## Quick Start
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -e ".[dev]"
-pytest
+python -m pip install -e ".[dev]"
+python -m pytest -q
 ```
 
----
+```python
+from wca.engine import WCAEngine
 
-## Quick Navigation
+engine = WCAEngine()
+engine.register_operator("reviewer-1", "viewer")
+clean_input = engine.process_input("Contact user@example.com", "reviewer-1")
+text, compliant, provenance = engine.finalize_output(
+    "The input is ready for review.",
+    session_token="review-session-001",
+)
+```
 
-- **Market Research & Commercial Blueprints**: Review [MARKET_RESEARCH_REPORT.md](./MARKET_RESEARCH_REPORT.md) for top app design analysis and monetization blueprints.
-- **User Operational Guide**: Review [USER_GUIDE.md](./USER_GUIDE.md) for instructions on leveraging the system to achieve operational greatness.
-- **Installation & Setup**: Review [INSTALL.md](./INSTALL.md) for step-by-step deployment instructions.
-- **Operational Framework**: Consult [WORLD_CLASS_ASSISTANT.md](./WORLD_CLASS_ASSISTANT.md) for linguistic and vocabulary controls.
-- **Ethical Governance**: Review [ETHICAL_GOVERNANCE.md](./ETHICAL_GOVERNANCE.md) for positive logic and non-adversarial principles.
-- **Legal & Compliance**: Read [SOFTWARE_LIABILITY_AGREEMENT.md](./SOFTWARE_LIABILITY_AGREEMENT.md) for liability allocation and governance.
+## Architecture and Limits
 
----
+WCA-XPI is a local library. It does not authenticate identities, persist audit records, manage encryption keys, provide durable approvals, prove authorship, perform general PII detection, control LLM behavior at the token layer, invoke an LLM, or certify compliance. A production integration must add identity, authorization, secure storage, encryption, monitoring, incident response, and domain-specific review.
 
-## License
+The `DeterministicCoherenceGate` checks the presence of caller-defined required keys. It is not a complete JSON Schema validator, semantic evaluator, or model-control mechanism. The `AuditLogger` and `ProvenanceLedger` are process-local utilities, not independently protected durable ledgers or cryptographic signature systems.
 
-This project is licensed under the terms specified in the repository configuration.
+## Documentation
+
+| Document | Purpose |
+|---|---|
+| [TECHNICAL_SPECIFICATION.md](TECHNICAL_SPECIFICATION.md) | Supported interfaces, control conditions, boundaries, and acceptance criteria. |
+| [RELEASE_STATUS.md](RELEASE_STATUS.md) | Verified quality gates, rights notice, and current maturity. |
+| [INSTALL.md](INSTALL.md) | Installation and integration guidance. |
+| [USER_GUIDE.md](USER_GUIDE.md) | Usage-oriented examples and interface explanation. |
+| [ETHICAL_GOVERNANCE.md](ETHICAL_GOVERNANCE.md) | Governance and communication framework. |
+
+## Rights Notice
+
+No public-use license file is included in this repository at this release baseline. The rights holder should select explicit reuse terms before publishing permission to copy, modify, distribute, or deploy the software. Source visibility supports review and does not state a reuse license.
